@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_06_16_183727) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.integer "calorie_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
