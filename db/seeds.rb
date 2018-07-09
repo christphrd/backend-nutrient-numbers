@@ -7,4 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user1 = User.create(first_name: "demo", last_name: "demo", email: "demo@demo.com", password: "demo", password_confirmation: "demo", calorie_goal: 3000)
+user2 = User.create(first_name: "fake", last_name: "fake", email: "fake@fake.com", password: "fake", password_confirmation: "fake", calorie_goal: 3000)
+
+#issue with creating days
 day1 = Day.create(year: 2018, month: 6, day: 6, user_id: 1)
+day2 = Day.create(year: 2018, month: 7, day: 5, user_id: 1)
+#issue with creating meals
+break1 = Meal.create(name: "Egg and rice", user_id: 1)
+lunch1 = Meal.create(name: "chicken and rice", user_id: 1)
+din1 = Meal.create(name: "meatloaf", user_id: 1)
+
+join1 = MealDay.create(meal_id: break1.id, day_id: day1.id)
