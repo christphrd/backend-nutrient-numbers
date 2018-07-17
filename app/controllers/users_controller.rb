@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users
+    render json: @users.to_json(only: [:id, :first_name, :last_name, :email, :calorie_goal]), status: 200
   end
 
   def create
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render json: @user
+    render json: @user.to_json(only: [:id, :first_name, :last_name, :email, :calorie_goal]), status: 200
   end
 
   def update
