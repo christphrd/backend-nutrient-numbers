@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @user = User.find(params[:id])
+    render json: @user
   end
 
   def update
@@ -22,7 +23,9 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
+    #incomplete
     params
   end
 end
